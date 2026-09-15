@@ -1,0 +1,31 @@
+RULE ID: SOC-DET-001
+RULE NAME: Host Availability Failure Detection
+CATEGORY: Availability Monitoring
+SEVERITY: Medium
+
+DESCRIPTION:
+Detects a monitored laboratory host becoming unreachable.
+
+TRIGGER:
+A monitored host changes from UP to DOWN.
+
+MONITORED HOST:
+HOME-TEST01
+IP: 10.10.10.13
+
+DETECTION SOURCE:
+06-Monitoring host-monitor.log
+
+RESPONSE:
+1. Verify the host state with ping.
+2. Verify the host is powered on.
+3. Check the VM network adapter.
+4. Check Windows Firewall configuration.
+5. Record the event in an incident report.
+
+FALSE POSITIVE CONSIDERATIONS:
+A host may appear DOWN because it is powered off, restarting,
+temporarily disconnected, or blocking ICMP traffic.
+
+AUTHORIZED ENVIRONMENT:
+Home Lab SOC Project

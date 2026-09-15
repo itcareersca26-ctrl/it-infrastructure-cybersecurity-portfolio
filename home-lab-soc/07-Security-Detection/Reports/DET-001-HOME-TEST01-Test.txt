@@ -1,0 +1,22 @@
+HOME LAB SOC - DETECTION TEST
+Rule: SOC-DET-001
+Test: HOME-TEST01 Availability
+Date: Tue Aug 18 12:36:06 AM EDT 2026
+
+=== ICMP TEST ===
+PING 10.10.10.13 (10.10.10.13) 56(84) bytes of data.
+64 bytes from 10.10.10.13: icmp_seq=1 ttl=128 time=1.16 ms
+64 bytes from 10.10.10.13: icmp_seq=2 ttl=128 time=0.534 ms
+64 bytes from 10.10.10.13: icmp_seq=3 ttl=128 time=0.551 ms
+64 bytes from 10.10.10.13: icmp_seq=4 ttl=128 time=0.679 ms
+
+--- 10.10.10.13 ping statistics ---
+4 packets transmitted, 4 received, 0% packet loss, time 3054ms
+rtt min/avg/max/mdev = 0.534/0.730/1.159/0.253 ms
+
+=== NMAP HOST DISCOVERY ===
+Starting Nmap 7.98 ( https://nmap.org ) at 2026-08-18 00:36 -0400
+Nmap scan report for 10.10.10.13
+Host is up (0.00051s latency).
+MAC Address: 00:15:5D:00:01:14 (Microsoft)
+Nmap done: 1 IP address (1 host up) scanned in 3.57 seconds

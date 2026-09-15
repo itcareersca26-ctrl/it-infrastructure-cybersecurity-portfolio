@@ -1,0 +1,38 @@
+HOME LAB SOC - SYSTEM TEST PLAN
+
+TEST PLAN ID: TEST-PLAN-001
+PROJECT: Home Lab SOC Project
+DATE: 2026-08-18
+
+OBJECTIVE:
+Verify that the SOC monitoring, detection, and dashboard components
+operate correctly within the authorized home laboratory environment.
+
+TEST AREAS:
+
+1. HOST AVAILABILITY
+Verify that monitored systems can be detected as UP or DOWN.
+
+2. NETWORK DISCOVERY
+Verify that authorized laboratory hosts can be identified using
+network discovery tools.
+
+3. SECURITY DETECTION
+Verify that the availability detection rule identifies a monitored
+host becoming unreachable.
+
+4. DASHBOARD
+Verify that the SOC dashboard can display monitoring information.
+
+5. LOGGING
+Verify that monitoring activity is recorded in the appropriate log.
+
+SUCCESS CRITERIA:
+- Authorized hosts are detected correctly.
+- Monitoring events are recorded.
+- Detection rules contain documented triggers and responses.
+- The dashboard is accessible.
+- Test results are documented.
+
+AUTHORIZED ENVIRONMENT:
+Home Lab SOC Project

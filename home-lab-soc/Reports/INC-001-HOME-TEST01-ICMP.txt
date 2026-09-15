@@ -1,0 +1,129 @@
+HOME LAB SOC - INCIDENT REPORT
+==============================
+
+Incident ID:
+INC-001
+
+Date:
+August 17, 2026
+
+Incident Type:
+Host Availability / Monitoring False Positive
+
+Affected Asset:
+HOME-TEST01
+
+IP Address:
+10.10.10.13
+
+Severity:
+Low
+
+STATUS:
+Resolved
+
+
+INITIAL DETECTION
+-----------------
+
+The Home Lab SOC host monitoring script reported
+HOME-TEST01 as DOWN during repeated ICMP availability checks.
+
+Initial monitoring results:
+
+21:31:48 | HOME-TEST01 | 10.10.10.13 | DOWN
+21:32:00 | HOME-TEST01 | 10.10.10.13 | DOWN
+21:32:12 | HOME-TEST01 | 10.10.10.13 | DOWN
+
+
+INVESTIGATION
+-------------
+
+Hyper-V was checked to determine whether the virtual machine
+was actually offline.
+
+HOME-TEST01 was confirmed to be:
+
+State:
+Running
+
+IP Address:
+10.10.10.13
+
+Virtual Network Adapter:
+Status OK
+
+Nmap host discovery also confirmed that 10.10.10.13 was
+reachable on the network.
+
+This indicated that the host was online but not responding
+to ICMP echo requests.
+
+
+ROOT CAUSE
+----------
+
+Windows Firewall was enabled on HOME-TEST01.
+
+The inbound ICMPv4 Echo Request firewall rule was disabled
+for the applicable network configuration.
+
+As a result, Kali could not receive ICMP echo responses even
+though HOME-TEST01 was operational.
+
+
+REMEDIATION
+-----------
+
+The specific Windows Firewall rule:
+
+File and Printer Sharing (Echo Request - ICMPv4-In)
+
+was enabled.
+
+No general firewall shutdown or broad firewall rule changes
+were performed.
+
+
+VERIFICATION
+------------
+
+Kali performed a direct ICMP test against HOME-TEST01.
+
+Result:
+
+4 packets transmitted
+4 packets received
+0% packet loss
+
+
+POST-REMEDIATION MONITORING
+---------------------------
+
+22:16:15 | HOME-TEST01 | 10.10.10.13 | UP
+22:16:25 | HOME-TEST01 | 10.10.10.13 | UP
+
+
+CONCLUSION
+----------
+
+The host was not actually offline.
+
+The initial DOWN status was caused by ICMP traffic being
+blocked by the Windows Firewall.
+
+The monitoring system successfully detected the condition,
+the cause was investigated, a controlled remediation was
+performed, and the result was verified.
+
+SOC Outcome:
+RESOLVED
+
+
+Evidence Sources:
+- Nmap host discovery
+- Hyper-V VM inventory
+- Hyper-V network adapter information
+- Windows Firewall configuration
+- Kali ICMP testing
+- Host Monitor v1 log

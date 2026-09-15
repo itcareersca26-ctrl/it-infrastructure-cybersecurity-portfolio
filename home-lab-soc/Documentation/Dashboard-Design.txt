@@ -1,0 +1,40 @@
+HOME LAB SOC - DASHBOARD DESIGN
+
+PURPOSE:
+Provides a simple web-based SOC dashboard for monitoring
+authorized laboratory systems.
+
+PLATFORM:
+Kali Linux
+Python 3
+Flask
+
+DASHBOARD ADDRESS:
+http://10.10.10.14:5000
+
+MONITORED SYSTEMS:
+DC01            10.10.10.10
+HOME-DC01       10.10.10.11
+HOME-FILE01     10.10.10.12
+HOME-TEST01     10.10.10.13
+
+DATA SOURCE:
+06-Monitoring host-monitor.log
+
+FEATURES:
+- Host availability status
+- IP address display
+- Last monitoring timestamp
+- Automatic browser refresh
+- UP, DOWN and NO DATA status indicators
+- Dark SOC-style interface
+
+REFRESH INTERVAL:
+10 seconds
+
+SECURITY SCOPE:
+The dashboard is intended for the authorized Home Lab SOC
+environment and is not intended for public exposure.
+
+EVIDENCE:
+02-SOC-Dashboard.png

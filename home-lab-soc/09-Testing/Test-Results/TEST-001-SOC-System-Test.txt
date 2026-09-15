@@ -1,0 +1,56 @@
+HOME LAB SOC - SYSTEM TEST RESULT
+
+TEST ID: TEST-001
+TEST PLAN: TEST-PLAN-001
+PROJECT: Home Lab SOC Project
+DATE: 2026-08-18
+STATUS: PASS
+
+TEST 1 - HOST AVAILABILITY
+Target: HOME-TEST01
+IP: 10.10.10.13
+Method: ICMP ping
+Result: PASS
+Evidence: 4 packets transmitted, 4 received, 0% packet loss.
+
+TEST 2 - NETWORK DISCOVERY
+Target: 10.10.10.13
+Method: Nmap host discovery
+Result: PASS
+Evidence: Host reported UP.
+MAC Address: 00:15:5D:00:01:14
+
+TEST 3 - HOST MONITORING
+Component: host_monitor.py
+Target: HOME-TEST01
+Result: PASS
+Evidence: Monitoring log recorded the host as UP after connectivity
+was restored.
+
+TEST 4 - SECURITY DETECTION
+Rule: SOC-DET-001
+Rule Name: Host Availability Failure Detection
+Result: PASS
+Evidence: Detection rule and test report were created and verified.
+
+TEST 5 - SOC DASHBOARD
+Component: dashboard.py
+Result: PASS
+Evidence: Dashboard was accessible through port 5000 and a screenshot
+was captured for project evidence.
+
+TEST 6 - LOGGING
+Log: host-monitor.log
+Result: PASS
+Evidence: Monitoring events were recorded in the project Logs folder.
+
+OVERALL RESULT:
+PASS
+
+SUMMARY:
+The authorized Home Lab SOC monitoring, detection, logging, and
+dashboard components were successfully tested. Evidence was collected
+and stored within the project.
+
+AUTHORIZED ENVIRONMENT:
+Home Lab SOC Project
