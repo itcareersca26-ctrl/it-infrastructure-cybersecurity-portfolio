@@ -1,0 +1,8 @@
+Asset ID,Status,Status Date,Assigned User,Department,Location,Notes
+TS-IT-0001,In Stock,2026-08-28,,,IT Storage,New equipment received
+TS-IT-0001,Assigned,2026-08-29,LabUser01,IT,Home Lab,Equipment assigned to IT administrator
+TS-IT-0001,Active,2026-08-29,LabUser01,IT,Home Lab,Equipment currently operational
+TS-IT-0001,Repair,2026-08-30,LabUser01,IT,Home Lab,Status changed from Active to Repair
+TS-IT-0002,In Stock,2026-08-31,,,IT Storage,New laptop received
+TS-IT-0002,Assigned,2026-08-31,LabUser01,IT,Home Lab,Laptop assigned to IT administrator
+TS-IT-0002,Active,2026-08-31,LabUser01,IT,Home Lab,Laptop currently operational
