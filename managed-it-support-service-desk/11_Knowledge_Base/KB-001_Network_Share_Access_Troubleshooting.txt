@@ -1,0 +1,119 @@
+﻿KNOWLEDGE BASE ARTICLE
+======================
+
+KB ID:
+KB-001
+
+TITLE:
+Troubleshooting Network Share Access
+
+CATEGORY:
+File Services / Network Access
+
+PURPOSE
+-------
+Provide a standard troubleshooting procedure when a user reports
+that they cannot access a Windows network share.
+
+EXAMPLE SHARE
+-------------
+\\HOME-FILE01\LabUser02-Test
+
+ENVIRONMENT
+-----------
+File Server:
+HOME-FILE01
+
+File Server IP:
+10.10.20.20
+
+Domain:
+HOME.LOCAL
+
+DNS Server:
+10.10.20.10
+
+TROUBLESHOOTING PROCEDURE
+--------------------------
+
+1. Verify the user's identity
+   Confirm which domain account the user is signed in with.
+
+2. Test network connectivity
+   Test whether the workstation can reach the file server.
+
+   Example:
+   Test-Connection HOME-FILE01 -Count 2
+
+3. Test DNS resolution
+   Confirm that the workstation can resolve the file server name.
+
+   Example:
+   nslookup HOME-FILE01
+
+4. Test the network share
+   Attempt to access:
+
+   \\HOME-FILE01\LabUser02-Test
+
+5. Check SMB share permissions
+   On HOME-FILE01, run:
+
+   Get-SmbShareAccess -Name "LabUser02-Test"
+
+6. Check NTFS permissions
+   Review the folder permissions:
+
+   Get-Acl "C:\CompanyShares\LabUser02-Test"
+
+7. Check for explicit Deny permissions
+   An explicit Deny permission can override an Allow permission.
+
+8. Check group membership
+   Confirm the user's Active Directory group membership.
+
+9. Retest access
+   Have the user sign out and sign back in if permissions or
+   group membership were recently changed.
+
+10. Document the result
+    Record the cause, resolution, affected user, and verification.
+
+LAB TEST RESULT
+---------------
+LabUser01:
+Access successfully confirmed.
+
+LabUser02:
+Access successfully confirmed.
+
+TestEmployee:
+Access denied after broad BUILTIN\Users access was removed.
+
+LESSON
+------
+Network share access depends on several layers:
+
+Workstation
+    ↓
+Network connectivity
+    ↓
+DNS
+    ↓
+SMB share
+    ↓
+Share permissions
+    ↓
+NTFS permissions
+    ↓
+User/group membership
+
+When troubleshooting, check each layer rather than assuming the
+problem is the network.
+
+ESCALATION
+----------
+If the issue cannot be resolved, document the troubleshooting steps
+already completed and escalate to the appropriate system administrator.
+
+END OF ARTICLE

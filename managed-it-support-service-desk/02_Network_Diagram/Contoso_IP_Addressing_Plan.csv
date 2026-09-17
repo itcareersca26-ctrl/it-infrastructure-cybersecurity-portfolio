@@ -1,0 +1,6 @@
+Device,Hostname,IPAddress,SubnetMask,Role
+Firewall / Router,CONTOSO-FW01,10.10.10.1,255.255.255.0,Default Gateway / Network Security
+Domain Controller,CONTOSO-DC01,10.10.10.10,255.255.255.0,Active Directory / DNS
+File Server,CONTOSO-FILE01,10.10.10.20,255.255.255.0,File Services / Shared Folders
+Application Server,CONTOSO-APP01,10.10.10.30,255.255.255.0,Application / Test Server
+Windows Client,CONTOSO-CLIENT01,10.10.10.100,255.255.255.0,Employee Workstation

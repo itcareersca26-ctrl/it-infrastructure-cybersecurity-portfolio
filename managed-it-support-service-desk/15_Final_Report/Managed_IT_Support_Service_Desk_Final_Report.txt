@@ -1,0 +1,137 @@
+﻿MANAGED IT SUPPORT & SERVICE DESK LAB
+FINAL PROJECT REPORT
+=====================
+
+Student: Lab User 01
+Project: Managed IT Support & Service Desk Lab
+Date: August 2026
+
+1. PROJECT OVERVIEW
+-------------------
+This project demonstrates a practical IT support and service-desk
+environment using Windows Server, Active Directory, file services,
+networking, PowerShell, virtual machines, ticketing, documentation,
+and troubleshooting procedures.
+
+2. TROUBLESHOOTING
+------------------
+The lab includes practical troubleshooting activities involving:
+- Windows systems
+- Network connectivity
+- DNS resolution
+- File-share access
+- NTFS permissions
+- User authentication
+- Server access
+
+Troubleshooting was performed using PowerShell and Windows
+administration tools.
+
+3. NETWORKING AND FILE SERVICES
+-------------------------------
+The lab includes SMB file sharing and NTFS permission management.
+
+The HOME-FILE01 server provides shared storage for lab projects.
+Permissions were configured to control access to specific users and
+groups.
+
+Access was tested using network paths and PowerShell commands.
+
+4. VIRTUAL MACHINES
+-------------------
+The lab uses Hyper-V virtual machines to provide a controlled
+infrastructure environment.
+
+Virtual machines used include:
+- HOME-DC01
+- HOME-FILE01
+- HOME-TEST01
+
+VM status and resource information were verified using Hyper-V
+PowerShell commands.
+
+5. SERVICE-DESK TICKETING
+-------------------------
+A service-desk ticket log was created to demonstrate:
+- Incident documentation
+- Priority classification
+- Troubleshooting
+- Resolution tracking
+- Ticket lifecycle management
+
+Priority levels documented include:
+Low, Medium, High, and Critical.
+
+6. POWERSHELL
+-------------
+PowerShell was used throughout the project for:
+- System administration
+- File management
+- Permission management
+- VM management
+- Network testing
+- Documentation
+- Verification
+
+7. KNOWLEDGE BASE
+-----------------
+A knowledge-base section was created to document repeatable
+troubleshooting and support procedures.
+
+This provides a reference for resolving common IT support issues.
+
+8. STANDARD OPERATING PROCEDURE
+-------------------------------
+An account-onboarding SOP was created covering:
+- Account creation
+- Password configuration
+- Group membership
+- Resource access
+- Validation
+- Documentation
+- Completion
+
+The procedure follows the principle of least privilege.
+
+9. INCIDENT RESPONSE
+--------------------
+An incident report was created for the Trading Projects access
+incident.
+
+The incident involved file and folder permission problems on
+HOME-FILE01. Ownership and NTFS permissions were investigated,
+corrected, and access was subsequently validated.
+
+10. SECURITY
+------------
+Security practices demonstrated in the lab include:
+- Least privilege
+- Controlled file access
+- NTFS permission management
+- User authentication
+- Administrative access control
+- Permission verification
+- Incident documentation
+
+11. DOCUMENTATION
+-----------------
+The project contains organized documentation covering networking,
+troubleshooting, virtual machines, ticketing, PowerShell, knowledge
+base procedures, SOPs, incident reports, screenshots, and this final
+report.
+
+12. CONCLUSION
+--------------
+The Managed IT Support & Service Desk Lab demonstrates practical
+experience with Windows administration, networking, file services,
+PowerShell, troubleshooting, service-desk processes, security,
+documentation, and incident resolution.
+
+The project provides a practical representation of an entry-level IT
+support and infrastructure environment and demonstrates the ability
+to troubleshoot problems, document solutions, manage permissions,
+and maintain organized technical records.
+
+PROJECT STATUS
+--------------
+Completed

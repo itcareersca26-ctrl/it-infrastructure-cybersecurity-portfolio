@@ -1,0 +1,10 @@
+ObjectType,Name,Purpose
+Organizational Unit,Contoso Users,Stores standard employee user accounts
+Organizational Unit,Contoso Computers,Stores Windows client computers
+Organizational Unit,Contoso Servers,Stores server computer accounts
+Organizational Unit,Contoso IT,Stores IT administrative accounts
+Organizational Unit,Contoso Help Desk,Stores help desk accounts and resources
+Security Group,GG_IT_Admins,Authorized IT administrative access
+Security Group,GG_HelpDesk,Tier 1 help desk permissions
+Security Group,GG_Employees,Standard employee access
+Security Group,GG_Managers,Manager-level access where approved

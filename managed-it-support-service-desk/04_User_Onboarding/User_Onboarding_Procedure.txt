@@ -1,0 +1,60 @@
+﻿MANAGED IT SUPPORT & SERVICE DESK LAB
+USER ONBOARDING PROCEDURE
+==========================
+
+PURPOSE
+-------
+Document the standard process for creating and validating a new
+domain user account in the HOME.LOCAL environment.
+
+DOMAIN
+------
+HOME.LOCAL
+
+DOMAIN CONTROLLER
+-----------------
+HOME-DC01
+
+USER ACCOUNTS VERIFIED
+----------------------
+Lab User 01
+SamAccountName: LabUser01
+Status: Enabled
+
+Lab User 02
+SamAccountName: LabUser02
+Status: Enabled
+
+ONBOARDING PROCESS
+------------------
+1. Confirm the employee's identity and authorization.
+2. Determine the required username.
+3. Create the user account in Active Directory.
+4. Configure the initial password according to company policy.
+5. Ensure the account is enabled.
+6. Assign only the required group memberships.
+7. Confirm the account can authenticate to the domain.
+8. Test access to required resources.
+9. Document the completed onboarding activity.
+
+VERIFICATION
+------------
+The following command was used to verify domain users:
+
+Get-ADUser -Filter * | Select-Object Name, SamAccountName, Enabled
+
+VERIFIED USERS
+--------------
+Administrator - Enabled
+Guest - Disabled
+krbtgt - Disabled
+LabUser01 - Enabled
+LabUser02 - Enabled
+
+SECURITY PRINCIPLE
+------------------
+User accounts should receive only the access required for their
+job responsibilities. Administrative privileges should not be
+assigned unless required.
+
+END OF DOCUMENT

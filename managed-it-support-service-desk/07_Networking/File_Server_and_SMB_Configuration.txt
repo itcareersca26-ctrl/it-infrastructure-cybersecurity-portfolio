@@ -1,0 +1,91 @@
+﻿MANAGED IT SUPPORT & SERVICE DESK LAB
+FILE SERVER AND SMB CONFIGURATION
+===================================
+
+Date:
+August 18, 2026
+
+FILE SERVER
+-----------
+Hostname:
+HOME-FILE01
+
+IPv4 Address:
+10.10.20.20
+
+DNS Server:
+10.10.20.10
+
+Purpose:
+HOME-FILE01 provides centralized file storage for the HOME.LOCAL
+lab environment.
+
+SMB SHARE
+---------
+Share Name:
+LabUser02-Test
+
+Local Path:
+C:\CompanyShares\LabUser02-Test
+
+Network Path:
+\\HOME-FILE01\LabUser02-Test
+
+SHARE PERMISSIONS
+-----------------
+Account:
+Everyone
+
+Permission:
+Change
+
+The SMB share provides network-level access to the shared folder.
+NTFS permissions on the folder provide the additional file-system
+security control.
+
+NTFS PERMISSIONS
+----------------
+HOME\LabUser01:
+Modify
+
+HOME\LabUser02:
+Modify
+
+BUILTIN\Administrators:
+Full Control
+
+NT AUTHORITY\SYSTEM:
+Full Control
+
+HOME-FILE01\Administrator:
+Full Control
+
+REMOVED ACCESS
+--------------
+BUILTIN\Users was removed from the folder permissions to prevent
+ordinary users from automatically receiving access.
+
+ACCESS VALIDATION
+-----------------
+LabUser01:
+Successfully accessed and saved a file.
+
+LabUser02:
+Successfully accessed the shared folder with Modify permission.
+
+TestEmployee:
+Access was denied after broad user access was removed.
+
+ADMINISTRATION COMMANDS
+-----------------------
+Get-SmbShare -Name "LabUser02-Test"
+
+Get-SmbShareAccess -Name "LabUser02-Test"
+
+Get-Acl "C:\CompanyShares\LabUser02-Test"
+
+CONCLUSION
+----------
+The configuration demonstrates practical SMB share administration,
+NTFS permission management, user access control, and access testing
+on a Windows Server file server.

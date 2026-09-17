@@ -1,0 +1,56 @@
+﻿CONTOSO CONSULTING
+ACTIVE DIRECTORY DESIGN
+========================================
+
+Domain:
+contoso.local
+
+Domain Controller:
+CONTOSO-DC01
+
+Domain Controller Services:
+- Active Directory Domain Services (AD DS)
+- DNS
+- User Authentication
+- Group Management
+- Computer Management
+
+Organizational Units:
+- Contoso Users
+- Contoso Computers
+- Contoso Servers
+- Contoso IT
+- Contoso Help Desk
+
+Security Groups:
+- GG_IT_Admins
+- GG_HelpDesk
+- GG_Employees
+- GG_Managers
+
+Purpose:
+The Active Directory environment provides centralized identity,
+authentication, authorization, and computer management for the
+Contoso Consulting organization.
+
+Tier 1 Support Responsibilities:
+- Create and manage user accounts within assigned permissions.
+- Reset passwords and unlock accounts.
+- Add users to approved security groups.
+- Verify account status and access.
+- Troubleshoot domain authentication issues.
+- Verify DNS and domain connectivity.
+- Escalate administrative or security-sensitive requests.
+- Document all account and access changes.
+
+Security Principles:
+- Least privilege
+- Role-based access
+- Separation of administrative privileges
+- Account lifecycle management
+- Documented access requests
+- Regular access reviews
+
+========================================
+END OF DOCUMENT
+========================================

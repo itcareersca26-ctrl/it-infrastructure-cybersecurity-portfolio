@@ -1,0 +1,85 @@
+﻿SERVICE DESK TICKET LOG
+=======================
+
+Ticket: INC-001
+Date: 2026-08-18
+User: Test User
+Category: Account / Authentication
+Priority: Medium
+Issue: User was unable to access the network file share.
+Troubleshooting:
+- Verified user account status.
+- Confirmed initial password-change requirement.
+- User changed the temporary password.
+- Retested authentication.
+Resolution: User successfully authenticated and accessed the required resource.
+Status: Resolved
+
+----------------------------------------
+
+Ticket: INC-002
+Date: 2026-08-18
+User: LabUser01
+Category: File Services / Permissions
+Priority: High
+Issue: User could not access the August 2026 trading project folder.
+Troubleshooting:
+- Checked SMB share availability.
+- Reviewed NTFS permissions.
+- Identified incorrect inherited permissions and deny entries.
+- Took ownership of the affected folder.
+- Removed the incorrect Test User deny permission.
+- Restored appropriate permissions for HOME\LabUser01 and HOME\Drone-Media.
+- Verified folder contents.
+Resolution: LabUser01 successfully regained access to the August 2026 trading records.
+Status: Resolved
+
+----------------------------------------
+
+Ticket: INC-003
+Date: 2026-08-18
+System: HOME-TEST01
+Category: DNS / Networking
+Priority: Medium
+Issue: DNS resolution required troubleshooting.
+Troubleshooting:
+- Verified network configuration.
+- Tested DNS resolution.
+- Confirmed connectivity to the lab environment.
+Resolution: DNS connectivity restored and documented.
+Status: Resolved
+
+----------------------------------------
+
+TICKET WORKFLOW
+---------------
+1. Create ticket.
+2. Identify user and affected system.
+3. Categorize the incident.
+4. Assign priority.
+5. Perform troubleshooting.
+6. Document findings.
+7. Apply resolution.
+8. Test the resolution.
+9. Close the ticket.
+
+STATUS VALUES
+-------------
+New
+In Progress
+Pending
+Resolved
+Closed
+
+PRIORITY LEVELS
+---------------
+Low
+Medium
+High
+Critical
+
+CONCLUSION
+----------
+The ticketing section demonstrates practical service-desk incident
+documentation, troubleshooting, resolution tracking, prioritization,
+and ticket lifecycle management.

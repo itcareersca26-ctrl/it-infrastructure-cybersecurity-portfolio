@@ -1,0 +1,67 @@
+﻿MANAGED IT SUPPORT & SERVICE DESK LAB
+VIRTUAL MACHINE INVENTORY
+==========================
+
+HYPER-V HOST
+------------
+Hostname:
+DC01
+
+Management Account:
+DC01\davia
+
+VIRTUAL MACHINES
+----------------
+
+1. HOME-DC01
+   Status: Running
+   Assigned Memory: Approximately 3.22 GB
+   Role: Active Directory Domain Controller
+   Domain: HOME.LOCAL
+
+2. HOME-FILE01
+   Status: Running
+   Assigned Memory: Approximately 3.11 GB
+   Role: Windows File Server
+   IPv4 Address: 10.10.20.20
+   Provides:
+   - SMB file sharing
+   - LabUser02-Test share
+   - Centralized file storage
+
+3. HOME-TEST01
+   Status: Off
+   Assigned Memory: 0 GB while powered off
+   Role: Windows client/test workstation
+
+LAB NETWORK
+-----------
+Domain:
+HOME.LOCAL
+
+Domain Controller:
+HOME-DC01
+
+File Server:
+HOME-FILE01
+
+Test Workstation:
+HOME-TEST01
+
+PURPOSE
+-------
+The virtual machines provide an isolated Windows infrastructure
+environment for practicing Active Directory administration,
+DNS, file services, networking, user management, troubleshooting,
+and security controls.
+
+VERIFICATION COMMAND
+--------------------
+Get-VM | Select-Object Name, State, CPUUsage, MemoryAssigned, Uptime
+
+RESULT
+------
+The Hyper-V host successfully reported all three lab virtual
+machines and their current operating states.
+
+END OF DOCUMENT

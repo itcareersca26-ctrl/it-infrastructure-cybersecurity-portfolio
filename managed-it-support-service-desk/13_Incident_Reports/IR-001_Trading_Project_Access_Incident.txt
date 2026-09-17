@@ -1,0 +1,124 @@
+﻿INCIDENT REPORT
+
+IR-001: Network Share Access / NTFS Permission Issue
+=====================================================
+
+DATE
+----
+August 2026
+
+ENVIRONMENT
+-----------
+HOME.LOCAL
+File Server: HOME-FILE01
+Domain Controller: HOME-DC01
+Affected Resource: Trading-Projects
+Affected Folder: Trading Track Record\August 2026
+
+SEVERITY
+--------
+Medium
+
+INCIDENT DESCRIPTION
+--------------------
+A user was unable to access and modify files within the August 2026
+trading records folder through the SMB network share.
+
+The network share itself was reachable, but access to the August 2026
+folder was denied.
+
+INITIAL FINDINGS
+----------------
+- SMB connectivity to HOME-FILE01 was working.
+- The Trading-Projects share was accessible.
+- The August 2026 folder existed.
+- NTFS permissions contained conflicting DENY entries.
+- The HOME\Test account had inherited permissions that interfered
+  with access.
+- The folder contained important trading documentation and images.
+
+TROUBLESHOOTING
+---------------
+
+1. Verified the network share was reachable.
+
+2. Confirmed the Trading-Projects share was accessible using:
+
+   \\10.10.20.20\Trading-Projects
+
+3. Checked the folder's NTFS permissions using:
+
+   icacls
+
+4. Identified conflicting DENY permissions.
+
+5. Took ownership of the affected folder and its files using
+   administrative credentials.
+
+6. Removed the conflicting HOME\Test DENY permissions.
+
+7. Disabled unwanted permission inheritance.
+
+8. Re-established required permissions for:
+
+   HOME\LabUser01
+   HOME\Drone-Media
+   BUILTIN\Administrators
+   NT AUTHORITY\SYSTEM
+
+9. Applied permissions to the affected files.
+
+10. Verified the files were accessible directly on HOME-FILE01.
+
+RESOLUTION
+----------
+The conflicting NTFS permissions were removed and the required
+permissions were restored.
+
+LabUser01 was assigned Modify permissions.
+
+Drone-Media was assigned Modify permissions.
+
+Administrators and SYSTEM retained Full Control.
+
+The folder and its files were then accessible from the file server.
+
+VALIDATION
+----------
+The following tests were successful:
+
+- Folder contents could be listed.
+- Trading documents were visible.
+- PNG files were visible.
+- NTFS permissions were confirmed.
+- LabUser01 had Modify permissions.
+- Administrative access was retained.
+
+ROOT CAUSE
+----------
+The primary cause was conflicting NTFS DENY permissions combined with
+inherited permissions on the affected folder and files.
+
+LESSON LEARNED
+--------------
+Avoid unnecessary DENY permissions because they can override expected
+access and make troubleshooting more difficult.
+
+Permissions should be documented and tested after changes.
+
+FOLLOW-UP
+---------
+- Continue monitoring the Trading-Projects share.
+- Document future permission changes.
+- Use least-privilege access.
+- Test access using the affected user account after permission changes.
+
+STATUS
+------
+RESOLVED
+
+CONCLUSION
+----------
+The incident demonstrated practical Windows Server file-share
+troubleshooting, NTFS permission analysis, ownership recovery,
+permission remediation, and access validation.

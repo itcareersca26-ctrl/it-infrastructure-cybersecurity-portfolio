@@ -1,0 +1,4 @@
+"EmployeeID","FirstName","LastName","Username","Department","JobTitle","OU","SecurityGroup","AccountStatus"
+"EMP1001","Sarah","Johnson","sjohnson","Finance","Financial Analyst","Contoso Users","GG_Employees","Enabled"
+"EMP1002","Michael","Brown","mbrown","IT","Help Desk Analyst","Contoso Help Desk","GG_HelpDesk","Enabled"
+"EMP1003","Jessica","Wilson","jwilson","Management","Operations Manager","Contoso Users","GG_Managers","Enabled"

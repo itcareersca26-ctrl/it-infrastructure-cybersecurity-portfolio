@@ -1,0 +1,104 @@
+﻿MANAGED IT SUPPORT & SERVICE DESK LAB
+TROUBLESHOOTING CASE
+====================
+
+CASE ID:
+TS-001
+
+TITLE:
+HOME-TEST01 DNS Resolution Failure
+
+SYSTEM:
+HOME-TEST01
+
+DOMAIN:
+HOME.LOCAL
+
+DNS SERVER:
+10.10.20.10
+
+SYMPTOM
+-------
+HOME-TEST01 was unable to resolve HOME.LOCAL using the configured
+DNS server.
+
+INITIAL TEST
+------------
+Command:
+
+nslookup home.local
+
+The workstation initially attempted to use an IPv6 DNS server and
+DNS requests timed out.
+
+IMPACT
+------
+Domain name resolution was unavailable or unreliable from the
+test server.
+
+INVESTIGATION
+-------------
+1. Verified network connectivity.
+2. Confirmed HOME-TEST01 could reach the domain controller.
+3. Confirmed the domain controller was reachable at:
+
+   10.10.20.10
+
+4. Reviewed the network adapter DNS configuration.
+5. Identified IPv6 DNS configuration as a source of the DNS
+   resolution problem.
+6. Disabled IPv6 on the test server as part of the lab
+   troubleshooting process.
+7. Confirmed the preferred DNS server was:
+
+   10.10.20.10
+
+VALIDATION
+----------
+The following command was used:
+
+nslookup home.local
+
+Successful result:
+
+Name:
+home.local
+
+Address:
+10.10.20.10
+
+A second test was performed:
+
+nslookup HOME-DC01
+
+This confirmed the workstation was querying the intended DNS
+server, although the specific host lookup required additional
+DNS verification.
+
+ROOT CAUSE
+----------
+The test server was initially attempting DNS resolution through
+an IPv6 DNS configuration rather than consistently using the
+HOME.LOCAL DNS server.
+
+RESOLUTION
+----------
+The IPv6 configuration was disabled for the lab test server and
+the preferred DNS server was configured as:
+
+10.10.20.10
+
+RESULT
+------
+HOME-TEST01 successfully resolved:
+
+home.local → 10.10.20.10
+
+LESSON
+------
+Active Directory clients should use the organization's internal
+DNS server for domain name resolution. Incorrect DNS configuration
+can prevent domain discovery, authentication, and access to
+domain resources.
+
+END OF CASE

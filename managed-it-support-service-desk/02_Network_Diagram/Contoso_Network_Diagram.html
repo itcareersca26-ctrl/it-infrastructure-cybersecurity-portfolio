@@ -1,0 +1,162 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<title>Contoso Consulting - IT Network Diagram</title>
+
+<style>
+body {
+    font-family: Arial, sans-serif;
+    background: #f4f6f8;
+    margin: 0;
+    padding: 40px;
+}
+
+h1 {
+    text-align: center;
+    color: #222;
+}
+
+.subtitle {
+    text-align: center;
+    color: #555;
+    margin-bottom: 40px;
+}
+
+.network {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.box {
+    background: white;
+    border: 2px solid #333;
+    border-radius: 10px;
+    padding: 18px;
+    width: 220px;
+    text-align: center;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.15);
+}
+
+.server {
+    border-color: #2c5aa0;
+}
+
+.client {
+    border-color: #2e7d32;
+}
+
+.network-device {
+    border-color: #8a4b08;
+}
+
+.line {
+    width: 3px;
+    height: 30px;
+    background: #555;
+}
+
+.row {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.title {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+.details {
+    font-size: 14px;
+    line-height: 1.5;
+}
+</style>
+</head>
+
+<body>
+
+<h1>Contoso Consulting — IT Network Diagram</h1>
+
+<div class="subtitle">
+Managed IT Support & Service Desk Lab<br>
+Prepared By: Lab User 01
+</div>
+
+<div class="network">
+
+    <div class="box network-device">
+        <div class="title">INTERNET</div>
+        <div class="details">
+            External Network
+        </div>
+    </div>
+
+    <div class="line"></div>
+
+    <div class="box network-device">
+        <div class="title">FIREWALL / ROUTER</div>
+        <div class="details">
+            Internet Gateway<br>
+            Network Security
+        </div>
+    </div>
+
+    <div class="line"></div>
+
+    <div class="box network-device">
+        <div class="title">CORE NETWORK SWITCH</div>
+        <div class="details">
+            Internal Network Connectivity
+        </div>
+    </div>
+
+    <div class="line"></div>
+
+    <div class="row">
+
+        <div class="box server">
+            <div class="title">CONTOSO-DC01</div>
+            <div class="details">
+                Windows Server<br>
+                Active Directory<br>
+                DNS
+            </div>
+        </div>
+
+        <div class="box server">
+            <div class="title">CONTOSO-FILE01</div>
+            <div class="details">
+                Windows Server<br>
+                File Services<br>
+                Shared Folders
+            </div>
+        </div>
+
+        <div class="box client">
+            <div class="title">CONTOSO-CLIENT01</div>
+            <div class="details">
+                Windows 11<br>
+                Employee Workstation<br>
+                Domain Joined
+            </div>
+        </div>
+
+        <div class="box server">
+            <div class="title">CONTOSO-APP01</div>
+            <div class="details">
+                Windows Server<br>
+                Application Server<br>
+                Test Environment
+            </div>
+        </div>
+
+    </div>
+
+</div>
+
+</body>
+</html>

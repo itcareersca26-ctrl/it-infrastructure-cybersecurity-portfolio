@@ -1,0 +1,2 @@
+"TicketID","User","Username","Issue","InitialSymptom","Investigation","Resolution","Escalation","Status"
+"INC-1001","Sarah Johnson","sjohnson","Active Directory account locked","User unable to authenticate to Windows","Verified account status and identified account lockout","Account unlocked and user instructed to authenticate again","No escalation required","Resolved"

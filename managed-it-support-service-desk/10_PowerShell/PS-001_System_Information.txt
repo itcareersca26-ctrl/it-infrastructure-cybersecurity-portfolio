@@ -1,0 +1,24 @@
+﻿SERVICE DESK SYSTEM INFORMATION SCRIPT
+=======================================
+
+Purpose:
+Collect basic workstation information for IT support and troubleshooting.
+
+Commands used:
+- Get-ComputerInfo
+- Get-CimInstance
+- Get-NetIPConfiguration
+- Get-Service
+- Get-Process
+
+The script collects:
+- Computer name
+- Operating system
+- Windows version
+- CPU information
+- Memory information
+- Network configuration
+- Running services
+- Current processes
+
+This demonstrates practical PowerShell automation for a service-desk environment.

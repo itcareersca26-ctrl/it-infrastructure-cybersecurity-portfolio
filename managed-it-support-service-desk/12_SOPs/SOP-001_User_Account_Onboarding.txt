@@ -1,0 +1,84 @@
+﻿STANDARD OPERATING PROCEDURE
+
+SOP-001: User Account Onboarding
+================================
+
+PURPOSE
+-------
+Provide a consistent procedure for creating and preparing a new
+employee account in the Windows domain environment.
+
+SCOPE
+-----
+This procedure applies to IT support staff responsible for user
+onboarding in the HOME.LOCAL lab environment.
+
+PROCEDURE
+---------
+
+1. RECEIVE USER REQUEST
+   - Confirm the employee's name.
+   - Confirm department and job role.
+   - Confirm required access and resources.
+
+2. CREATE USER ACCOUNT
+   - Open Active Directory Users and Computers.
+   - Navigate to the appropriate organizational unit.
+   - Create the user account.
+   - Assign the required username.
+   - Configure a temporary password.
+
+3. CONFIGURE ACCOUNT
+   - Require password change at first logon.
+   - Confirm the account is enabled.
+   - Verify the user's account information.
+
+4. GROUP MEMBERSHIP
+   - Add the user only to groups required for their job role.
+   - Follow the principle of least privilege.
+   - Do not provide unnecessary administrative access.
+
+5. RESOURCE ACCESS
+   - Verify required network shares.
+   - Verify NTFS permissions.
+   - Confirm the user can access only authorized resources.
+
+6. VALIDATION
+   - Test user authentication.
+   - Test network-share access.
+   - Confirm required applications and resources are available.
+
+7. DOCUMENTATION
+   - Record the onboarding ticket.
+   - Document assigned access.
+   - Record any special configuration.
+
+8. COMPLETION
+   - Confirm the account is ready for the user.
+   - Close the service-desk ticket.
+   - Update documentation if required.
+
+SECURITY REQUIREMENTS
+---------------------
+- Follow least privilege.
+- Never share administrator credentials.
+- Use temporary passwords appropriately.
+- Verify permissions before completing onboarding.
+- Document changes made to user accounts.
+
+VALIDATION CHECKLIST
+--------------------
+[ ] User account created
+[ ] Account enabled
+[ ] Temporary password configured
+[ ] Required groups assigned
+[ ] Required file access verified
+[ ] Authentication tested
+[ ] Service-desk ticket updated
+[ ] Onboarding completed
+
+CONCLUSION
+----------
+This SOP provides a repeatable user-onboarding process that reduces
+configuration errors and ensures that access is assigned consistently
+and according to the user's job requirements.

@@ -1,0 +1,56 @@
+﻿MANAGED IT SUPPORT & SERVICE DESK LAB
+USER OFFBOARDING PROCEDURE
+===========================
+
+PURPOSE
+-------
+Document the process used to remove a temporary or departing user
+account while preserving security and accountability.
+
+OFFBOARDING STEPS
+-----------------
+1. Confirm the offboarding request is authorized.
+2. Identify the correct Active Directory account.
+3. Disable the account before deletion when appropriate.
+4. Remove unnecessary access and group memberships.
+5. Verify access to network resources is no longer available.
+6. Preserve required documentation and business data.
+7. Delete the account only when authorized by company policy.
+8. Document the completed action.
+
+LAB EXAMPLE
+-----------
+Account:
+TestEmployee
+
+Purpose:
+Temporary test account used to validate unauthorized access to the
+LabUser02-Test network share.
+
+TEST RESULT
+-----------
+TestEmployee was used to test access restrictions.
+
+After NTFS permissions were tightened, TestEmployee was unable to
+access the LabUser02-Test share.
+
+After testing was completed, the temporary TestEmployee account
+was removed from Active Directory.
+
+VERIFICATION
+------------
+The account was confirmed as removed using Active Directory Users
+and Computers.
+
+SECURITY PRINCIPLE
+------------------
+Temporary accounts should not remain active after testing or the
+completion of their authorized purpose.
+
+IMPORTANT
+---------
+Production employee accounts should never be deleted without an
+authorized offboarding request and appropriate data-retention
+procedures.
+
+END OF DOCUMENT
